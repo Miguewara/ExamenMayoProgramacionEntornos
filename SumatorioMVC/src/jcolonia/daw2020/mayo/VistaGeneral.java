@@ -159,4 +159,5 @@ public abstract class VistaGeneral {
 		mostrarMensaje("Pulse «Intro» para continuar");
 		in.nextLine();
 	}
+	
 }

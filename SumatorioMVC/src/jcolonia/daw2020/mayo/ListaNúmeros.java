@@ -235,4 +235,9 @@ public class ListaNúmeros {
 		System.out.println();
 		System.out.println(grupo);
 	}
+
+	public void setNum(Object recogerNum) {
+		// TODO Esbozo de método generado automáticamente
+		
+	}
 }

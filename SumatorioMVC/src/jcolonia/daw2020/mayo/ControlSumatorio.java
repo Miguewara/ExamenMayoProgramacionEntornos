@@ -2,6 +2,7 @@ package jcolonia.daw2020.mayo;
 
 import java.util.Scanner;
 
+
 /**
  * Gestión de números «decimales»: recogida y visualización de la suma
  * 
@@ -43,23 +44,23 @@ public class ControlSumatorio {
 
 		// Bucle general
 		do {
-			entrada = menúPrincipal.elegirOpción();
+			entrada = menúPrincipal.pedirOpcion();
 			switch (entrada) {
 			case 0: // Salir
 				menúPrincipal.mostrarMensaje("¡¡¡A-D-I-O-S!!");
 				break;
-//			case 1: // Opción 1: Entrada datos
-//				cargarSumando();
-//				break;
-//			case 2: // Opción 2: Mostrar sumandos
-//				mostrarSumandos();
-//				break;
-//			case 3: // Opción 3: Mostrar suma
-//				mostrarSuma();
-//				break;
-//			case 4: // Opción 4: Reset
-//				restablecer();
-//				break;
+		case 1: // Opción 1: Entrada datos
+			cargarSumando();
+			break;
+		case 2: // Opción 2: Mostrar sumandos
+			mostrarSumandos();
+			break;
+		case 3: // Opción 3: Mostrar suma
+			mostrarSuma();
+			break;
+		case 4: // Opción 4: Reset
+			restablecer();
+			break;
 			default: // Opción no esperada: abortar
 				ejecutarGenérico(entrada);
 				System.err.println("Error interno de programa - operación pendiente de desarrollo");
@@ -67,6 +68,35 @@ public class ControlSumatorio {
 			}
 		} while (entrada != 0);
 	}
+
+	public void restablecer() {
+		// TODO Esbozo de método generado automáticamente
+		
+	}
+
+	public void mostrarSuma() {
+		// TODO Esbozo de método generado automáticamente
+		
+	}
+
+	public void mostrarSumandos() {
+		// TODO Esbozo de método generado automáticamente
+		
+	}
+
+	public void cargarSumando() {
+		VistaAgregarValor vista;
+	        ListaNúmeros nuevoNum;
+	        
+	        vista = new VistaAgregarValor(TÍTULO_MENÚ_PRINCIPAL, in);
+	        nuevoNum = new ListaNúmeros();
+	        
+	        if(vista.gestionarSumando(nuevoNum)) {
+	        	conjunto.add(nuevoNum);
+	        }
+	        }
+	
+	
 
 	private void ejecutarGenérico(int id) {
 		String mensaje;
